@@ -93,10 +93,9 @@
 .pswp__container,
 .pswp__img {
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
       user-select: none;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none; }
 
 .pswp__zoom-wrap {
@@ -177,3 +176,27 @@
 .pswp__error-msg a {
   color: #CCC;
   text-decoration: underline; }
+
+/*
+	Rotation styles (for EXIF orientation handling)
+*/
+.pswp__rotate90 {
+  transform: rotate(90deg) translateY(-100%);
+  -webkit-transform: rotate(90deg) translateY(-100%);
+  -ms-transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left; }
+
+.pswp__rotate180 {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg); }
+
+.pswp__rotate270 {
+  transform: rotate(270deg) translateX(-100%);
+  -webkit-transform: rotate(270deg) translateX(-100%);
+  -ms-transform: rotate(270deg) translateX(-100%);
+  transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left; }
